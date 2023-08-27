@@ -1,0 +1,26 @@
+/* Utilities */
+.top-1 {
+    top: 1rem;
+}
+
+.end-1 {
+    right: 1rem;
+}
+
+/* Reusable elements */
+.accordion-img {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 0.75;
+    text-align: center;
+}
+
+.modal-inline-card {
+    min-width: 150px;
+}
+
+.card-btn-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
