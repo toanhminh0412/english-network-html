@@ -51,12 +51,13 @@
     <div id="myModal"></div>
     
     <!-- D3 content -->
-    <svg id="container" width="100%" height="100vh" viewBox="0 0 1500 500" style="margin-top: 30px;"></svg>
-
+    <div id="page">
+        <svg id="container" width="90%" height="80vh" viewBox="0 0 1500 500"></svg>
+    </div>
 
     <script type="module">
         import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
-        const width = 1000;
+        const width = 1500;
         const height = 500;
         
         const drawGraph = async () => {
@@ -65,8 +66,6 @@
 
             let nodes = data.people.map(d => ({...d}));
             const links = data.relationships.map(d => ({...d}));
-            console.log(nodes);
-            console.log(links);
 
             // Initialize color
             // const color = d3.scaleOrdinal(d3.schemeTableau10);
@@ -74,7 +73,7 @@
             // Create a simulation with several forces.
             const simulation = d3.forceSimulation(nodes)
             .force("link", d3.forceLink(links).id(d => d.id).distance(200))
-            .force("charge", d3.forceManyBody().strength(-500))
+            .force("charge", d3.forceManyBody().strength(-3000))
             .force("center", d3.forceCenter(width/2, height/2))
             .on("tick", ticked);
 
@@ -104,12 +103,30 @@
                 .attr("data-bs-target", d => `#bio-${d.id}`);
             
             // Add names as texts to nodes
+            let canvas = null;
             const text = svg.append("g")
             .selectAll()
                 .data(nodes)
                 .join("text")
                 .text(d => d.name)
-                .attr('dx', -40);
+                .attr('dx', d => { 
+                    // Calculate the text width and shift the text to the left by half of the text width
+                    if (!canvas) canvas = document.createElement('canvas');
+                    const context = canvas.getContext("2d");
+                    context.font = "16px Times New Roman";
+                    const textWidth = context.measureText(d.name).width;
+                    return  -textWidth / 2; 
+                })
+                // Try to shift the text to be centered vertically of the node but doesn't work. Not sure why.
+                /*.attr('dy', d => { 
+                    console.log(d.name);
+                    // Calculate the text width and shift the text to the left by half of the text width
+                    if (!canvas) canvas = document.createElement('canvas');
+                    const context = canvas.getContext("2d");
+                    context.font = "16px Times New Roman";
+                    const textHeight = context.measureText(d.name).height;
+                    return  -textHeight / 2; 
+                });*/
 
             // Add a title tag to each node
             node.append("title")
@@ -152,6 +169,15 @@
                 text
                     .attr("x", d => d.x)
                     .attr("y", d => d.y);
+            }
+
+            // Custom force. Not in use but put here in case needed in the future.
+            function customForce(alpha) {
+                for (let i = 0, n = nodes.length, node, k = alpha * 0.1; i < n; ++i) {
+                  node = nodes[i];
+                  node.vx -= node.x * k;
+                  node.vy -= node.y * k;
+                }
             }
 
             // Functions to handle drag events
@@ -214,7 +240,6 @@
             // Add relationship models
             for (let i=0; i<links.length; i++) {
                 const relationship = links[i];
-                console.log(relationship);
                 document.getElementById('container').insertAdjacentHTML('afterend', 
                 `<div class="relationship-modal modal fade" id="relationship-${relationship.id}" tabindex="-1">
                     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -223,20 +248,18 @@
                           <h1 class="modal-title fs-5"><strong>${relationship.source.name}</strong> and <strong>${relationship.target.name}</strong></h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body d-flex flex-row gap-2">
-                            <div class="card flex-grow-1 modal-inline-card">
-                                <button type="button" class="card-btn-close btn-close" aria-label="Close"></button>
-                                <div class="card-body">
-                                    <h5 class="card-title" style="padding-right: 2rem">${relationship.source.name}</h5>
-                                    <p class="card-text">Something about this person</p>
-                                </div>
-                            </div>
-                            
+                        <div class="modal-body d-flex flex-row gap-2">                            
                             <div class="card accordion flex-grow-1 modal-inline-card" id="letters-${relationship.id}">
                                 ${relationship.letters.map((letter, letterIndex) => 
                                 `<div class="accordion-item">
                                     <h2 class="accordion-header">
-                                        <button class="accordion-button ${letterIndex === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#letter-${letterIndex}" aria-expanded="true" aria-controls="letter-${letterIndex}">
+                                        <button class="letter-open-button accordion-button ${letterIndex === 0 ? '' : 'collapsed'}" 
+                                            type="button" 
+                                            data-bs-toggle="collapse" 
+                                            data-bs-target="#letter-${letterIndex}" 
+                                            aria-expanded="true" 
+                                            aria-controls="letter-${letterIndex}"
+                                            data-comment="${letter.comment}">
                                             ${letter.title}
                                         </button>
                                     </h2>
@@ -252,8 +275,7 @@
                             <div class="card flex-grow-1 modal-inline-card">
                                 <button type="button" class="card-btn-close btn-close" aria-label="Close"></button>
                                 <div class="card-body">
-                                    <h5 class="card-title" style="padding-right: 2rem">${relationship.target.name}</h5>
-                                    <p class="card-text">Something about this person</p>
+                                    <iframe class="letter-comment" src="${relationship.letters[0].comment}" style="min-height: 300px; color-scheme: light;"></iframe>
                                 </div>
                             </div>
                         </div>
