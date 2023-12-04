@@ -51,15 +51,9 @@
     <div id="myModal"></div>
     
     <!-- D3 content -->
-    <main id="page">
-        <div id="page-content">
-            <svg id="container" width="1000" height="700" viewBox="0 0 1500 500"></svg>
-            <div id="container-zoom-controller" class="btn-group-vertical">
-                <button type="button" id="zoom-in-btn" class="btn btn-primary">&plus;</button>
-                <button type="button" id="zoom-out-btn" class="btn btn-secondary">&minus;</button>
-            </div>
-        </div>
-    </main>
+    <div id="page">
+        <svg id="container" width="90%" height="80vh" viewBox="0 0 1500 500"></svg>
+    </div>
 
     <script type="module">
         import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
@@ -209,7 +203,7 @@
                 const person = nodes[i];
                 document.getElementById('container').insertAdjacentHTML('afterend', 
                 `<div class="modal fade" id="bio-${person.id}" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered modal-fullscreen-xl-down modal-xl">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h1 class="modal-title fs-5">${person.name} (${person.bio.born} - ${person.bio.died})</h1>
@@ -217,16 +211,18 @@
                         </div>
                         <div class="modal-body">
                             <div class="accordion" id="bio-content-${person.id}">
-                            ${Object.keys(person.data).map((key, personDataInd) => 
+                            ${Object.keys(person.data).map((key) => 
                                 `<div class="accordion-item">
                                     <h2 class="accordion-header">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#person-${person.id}-${key}" aria-controls="person-${person.id}-${key}">
                                             ${key}
                                         </button>
                                     </h2>
-                                    <div id="person-${person.id}-${key}" class="accordion-collapse collapse ${personDataInd === 0 ? 'show' : ''}" data-bs-parent="#accordionExample">
+                                    <div id="person-${person.id}-${key}" class="accordion-collapse collapse ${key.toLowerCase() === "image" ? "show": ""}" data-bs-parent="#accordionExample">
                                         <div class="accordion-body ${key.toLowerCase() === "image" ? "text-center": ""}">
-                                            <iframe class="bio-iframe" src="${person.data[key]}"></iframe>
+                                            ${key.toLowerCase() === "image" ? 
+                                            `<img src="${person.data[key]}" class="accordion-img" />`
+                                            : `<iframe src="${person.data[key]}" style="min-height: 300px; color-scheme: light;"></iframe>`}
                                         </div>
                                     </div>
                                 </div>`
@@ -246,20 +242,13 @@
                 const relationship = links[i];
                 document.getElementById('container').insertAdjacentHTML('afterend', 
                 `<div class="relationship-modal modal fade" id="relationship-${relationship.id}" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered modal-fullscreen-xl-down modal-xl">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
                       <div class="modal-content">
                         <div class="modal-header">
                           <h1 class="modal-title fs-5"><strong>${relationship.source.name}</strong> and <strong>${relationship.target.name}</strong></h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body d-flex flex-row gap-2"> 
-                            <div class="card flex-grow-1 modal-inline-card">
-                                <button type="button" class="card-btn-close btn-close" aria-label="Close"></button>
-                                <div class="card-body">
-                                    <iframe class="relationship-iframe" src="${relationship.relationship}"></iframe>
-                                </div>
-                            </div>
-                            
+                        <div class="modal-body d-flex flex-row gap-2">                            
                             <div class="card accordion flex-grow-1 modal-inline-card" id="letters-${relationship.id}">
                                 ${relationship.letters.map((letter, letterIndex) => 
                                 `<div class="accordion-item">
@@ -276,7 +265,7 @@
                                     </h2>
                                     <div id="letter-${letterIndex}" class="accordion-collapse collapse ${letterIndex === 0 ? 'show' : ''}" data-bs-parent="#letters-${relationship.id}">
                                         <div class="accordion-body">
-                                            <iframe class="letter-iframe" src="${letter.content}"></iframe>
+                                            <iframe src="${letter.content}" style="min-height: 300px; width: 100%; color-scheme: light;"></iframe>
                                         </div>
                                     </div>
                                 </div>`    
@@ -286,7 +275,7 @@
                             <div class="card flex-grow-1 modal-inline-card">
                                 <button type="button" class="card-btn-close btn-close" aria-label="Close"></button>
                                 <div class="card-body">
-                                    <iframe class="letter-comment" src="${relationship.letters[0].comment}"></iframe>
+                                    <iframe class="letter-comment" src="${relationship.letters[0].comment}" style="min-height: 300px; color-scheme: light;"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -301,12 +290,8 @@
 
         drawGraph();
         
-        // Add app javascript after DOM has been fully built
-        let script = document.createElement('script');
-        script.src = "script.js";
-        document.body.append(script); // (*)
 
     </script>
-    <!-- <script type="text/javascript" src="script.js"></script> -->
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

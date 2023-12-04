@@ -12,8 +12,7 @@
                 "spouse": "Anne More (1601)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -27,8 +26,7 @@
                 "spouse": "??"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -42,8 +40,7 @@
                 "spouse": "Edward Russell, Third Earl of Bedford (1594)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -57,8 +54,7 @@
                 "spouse": "Unverified"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -72,8 +68,7 @@
                 "spouse": "Mary Jacob (1619)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -87,8 +82,7 @@
                 "spouse": "Eleanor Grimsditch (1627)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -102,8 +96,7 @@
                 "spouse": "Unverified"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -117,8 +110,7 @@
                 "spouse": "Mary Herbert (1599)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -132,8 +124,7 @@
                 "spouse": "Richard Herbert, Lord of Cherbury (1581)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -147,8 +138,7 @@
                 "spouse": "Jane Danvers (1629)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -162,8 +152,7 @@
                 "spouse": "(?) Ann Lewis (1594)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
 
         },
@@ -178,8 +167,7 @@
                 "spouse": "Katherine Parker (1595)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         },
         {
@@ -193,8 +181,7 @@
                 "spouse": "Mary Staples (1627)"
             },
             "data": {
-                "image": "./data/images/Donne_Test.jpg",
-                "bio": "./bio/Donne_Test.html"
+                "Biography": "./bio/Donne_Test.html"
             }
         }
     ],
@@ -203,14 +190,8 @@
             "id": 0,
             "source": 0,
             "target": 1,
+            "relationship": "./relationship/donne_hwotton.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 1,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_wotton/donne_wotton.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 1,
@@ -252,14 +233,8 @@
             "id": 1,
             "source": 0,
             "target": 2,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 2,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_bedford/donne_bedford.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 2,
@@ -323,14 +298,8 @@
             "id": 2,
             "source": 0,
             "target": 3,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 1,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_goodere/donne_goodere.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 1,
@@ -344,14 +313,8 @@
             "id": 3,
             "source": 0,
             "target": 4,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 4,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_cbrooke/donne_cbrooke.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 4,
@@ -380,14 +343,8 @@
             "id": 4,
             "source": 0,
             "target": 5,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 1,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_rwoodward/donne_rwoodward.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 1,
@@ -429,14 +386,8 @@
             "id": 5,
             "source": 0,
             "target": 6,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 6,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_twoodward/donne_twoodward.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 6,
                     "to": 0,
@@ -478,14 +429,8 @@
             "id": 6,
             "source": 0,
             "target": 7,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 7,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_eherbert/donne_eherbert.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 7,
@@ -499,14 +444,8 @@
             "id": 7,
             "source": 0,
             "target": 8,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 8,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_mherbert/donne_mherbert.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 8,
@@ -528,14 +467,8 @@
             "id": 8,
             "source": 0,
             "target": 9,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 9,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_gherbert/donne_gherbert.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 9,
@@ -556,14 +489,8 @@
             "id": 9,
             "source": 0,
             "target": 10,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 10,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_jonson/donne_jonson.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 0,
                     "to": 10,
@@ -591,14 +518,8 @@
             "id": 10,
             "source": 0,
             "target": 11,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 11,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_cronwaleys/donne_cronwaleys.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 11,
                     "to": 0,
@@ -612,14 +533,8 @@
             "id": 11,
             "source": 0,
             "target": 12,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-                {
-                    "from": 0,
-                    "to": 12,
-                    "title": "Relationship",
-                    "content": "./data/letters/donne_donnejr/donne_donnejr.html",
-                    "comment": "./data/comments/Donne_Henry_relationship.html"
-                },
                 {
                     "from": 12,
                     "to": 0,
@@ -633,6 +548,7 @@
             "id": 12,
             "source": 10,
             "target": 2,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
 
             ]
@@ -641,6 +557,7 @@
             "id": 13,
             "source": 7,
             "target": 8,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
 
             ]
@@ -649,6 +566,7 @@
             "id": 14,
             "source": 7,
             "target": 9,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
 
             ]
@@ -657,6 +575,7 @@
             "id": 15,
             "source": 8,
             "target": 9,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
 
             ]
@@ -665,8 +584,8 @@
             "id": 16,
             "source": 5,
             "target": 6,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
-
                 {
                     "from": 5,
                     "to": 6,
@@ -688,6 +607,7 @@
             "id": 17,
             "source": 3,
             "target": 4,
+            "relationship": "./relationship/donne_cbrooke.html",
             "letters": [
 
             ]
