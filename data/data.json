@@ -1,0 +1,1111 @@
+{
+    "people": [
+        {
+            "id": 0,
+            "name": "John Donne",
+            "color": "#0BA132",
+            "radius": 40,
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/Donne_Test.html"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Henry Wotton",
+            "color": "#BABD8D",
+            "radius": 30,
+            "bio": {
+                "born": 1568,
+                "died": 1639,
+                "occupation": "Author, diplomat, politician",
+                "spouse": "??"
+            },
+            "data": {
+                "Biography": "./bio/Henry_Wotton.html"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Lucy Russell",
+            "color": "#BABD8D",
+            "bio": {
+                "born": 1581,
+                "died": 1627,
+                "occupation": "Countess of Bedford",
+                "spouse": "Edward Russell, Third Earl of Bedford (1594)"
+            },
+            "data": {
+                "Biography": "./bio/Lucy_Russell.html"
+            }
+        },
+        {
+            "id": 3,
+            "name": "Henry Goodyer",
+            "color": "#BABD8D",
+            "bio": {
+                "born": 1540,
+                "died": 1640,
+                "occupation": "Many Different Things",
+                "spouse": "Unverified"
+            },
+            "data": {
+                "Biography": "./bio/Henry_Goodere.html"
+            }
+        },
+        {
+            "id": 4,
+            "name": "Christopher Brooke",
+            "color": "#FFDAC6",
+            "bio": {
+                "born": "~1560",
+                "died": 1628,
+                "occupation": "Member of Parliament (York)",
+                "spouse": "Mary Jacob (1619)"
+            },
+            "data": {
+                "Biography": "./bio/Christopher_Brooke.html"
+            }
+        },
+        {
+            "id": 5,
+            "name": "Rowland Woodward",
+            "color": "#FFDAC6",
+            "bio": {
+                "born": 1573,
+                "died": 1636,
+                "occupation": "Secretary, Scribe",
+                "spouse": "Eleanor Grimsditch (1627)"
+            },
+            "data": {
+                "Biography": "./bio/Rowland_Woodward.html"
+            }
+        },
+        {
+            "id": 6,
+            "name": "Thomas Woodward",
+            "color": "#FFDAC6",
+            "bio": {
+                "born": 1540,
+                "died": 1640,
+                "occupation": "Unverified",
+                "spouse": "Unverified"
+            },
+            "data": {
+                "Biography": "./bio/thomas_woodward.html"
+            }
+        },
+        {
+            "id": 7,
+            "name": "Edward Herbert",
+            "color": "#FA9500",
+            "bio": {
+                "born": 1583,
+                "died": 1648,
+                "occupation": "Soldier, Diplomat",
+                "spouse": "Mary Herbert (1599)"
+            },
+            "data": {
+                "Biography": "./bio/edward_herbert.html"
+            }
+        },
+        {
+            "id": 8,
+            "name": "Magdalen Herbert",
+            "color": "#FA9500",
+            "bio": {
+                "born": 1561,
+                "died": 1627,
+                "occupation": "Patron",
+                "spouse": "Richard Herbert, Lord of Cherbury (1581)"
+            },
+            "data": {
+                "Biography": "./bio/magdalen_herbert.html"
+            }
+        },
+        {
+            "id": 9,
+            "name": "George Herbert",
+            "color": "#FA9500",
+            "bio": {
+                "born": 1593,
+                "died": 1633,
+                "occupation": "Priest, Poet",
+                "spouse": "Jane Danvers (1629)"
+            },
+            "data": {
+                "Biography": "./bio/george_herbert.html"
+            }
+        },
+        {
+            "id": 10,
+            "name": "Ben Jonson",
+            "color": "#BABD8D" ,
+            "bio": {
+                "born": 1597,
+                "died": 1637,
+                "occupation": "Poet, Playwright",
+                "spouse": "(?) Ann Lewis (1594)"
+            },
+            "data": {
+                "Biography": "./bio/Ben_Jonson.html"
+            }
+
+        },
+        {
+            "id": 11,
+            "name": "William Cronwaleys",
+            "color": "#EB6424",
+            "bio": {
+                "born": 1576,
+                "died": 1614,
+                "occupation": "Member of Parliament (Orford) and the Privy Chamber",
+                "spouse": "Katherine Parker (1595)"
+            },
+            "data": {
+                "Biography": "./bio/william_cronwaleys.html"
+            }
+        },
+        {
+            "id": 12,
+            "name": "John Donne Jr.",
+            "color": "#EB6424",
+            "bio": {
+                "born": 1604,
+                "died": 1663,
+                "occupation": "Priest and Chaplain, Literary Executor",
+                "spouse": "Mary Staples (1627)"
+            },
+            "data": {
+                "Biography": "./bio/john_donne_jr.html"
+            }
+        },
+        {
+            "id": 13,
+            "name": "L of D",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/l_of_d.html"
+            }
+        },
+        {
+            "id": 14,
+            "name": "Edward Guilpin",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/edward_guilpin.html"
+            }
+        },
+        {
+            "id": 15,
+            "name": "Samuel Brooke",
+            "color": "#FFDAC6",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/samuel_brooke.html"
+            }
+        },
+        {
+            "id": 16,
+            "name": "Beaupre Bell",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/beaupre_bell.html"
+            }
+        },
+        {
+            "id": 17,
+            "name": "I. L.",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/i_l.html"
+            }
+        },
+        {
+            "id": 18,
+            "name": "Countess of Huntingdon",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/countess_huntingdon.html"
+            }
+        },
+        {
+            "id": 19,
+            "name": "The Lady Carew",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/lady_carey.html"
+            }
+        },
+        {
+            "id": 20,
+            "name": "The Countess of Salisbury",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/countess_salisbury.html"
+            }
+        },
+        {
+            "id": 21,
+            "name": "Mr. Tilman",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/tilman.html"
+            }
+        },
+        {
+            "id": 22,
+            "name": "Richard Andrews",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/richard_andrews.html"
+            }
+        },
+        {
+            "id": 23,
+            "name": "Lady Essex Rich",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More (1601)"
+            },
+            "data": {
+                "Biography": "./bio/lady_essex_rich.html"
+            }
+        },
+        {
+            "id": 24,
+            "name": "John Hoskyns",
+            "color": "#7C6A0A",
+            "bio": {
+                "born": 1566,
+                "died": 1638,
+                "occupation": "Rhetorician",
+                "genre": "N/A",
+                "spouse": "N/A"
+            },
+            "data": {
+                "Biography": "./bio/john_hoskyns.html"
+            }
+        }
+    ],
+    "relationships": [
+        {
+            "id": 0,
+            "source": 0,
+            "target": 1,
+            "relationship": "./relationship/donne_hwotton.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "HWKiss",
+                    "content": "./data/letters/donne_wotton/hwkiss.html",
+                    "comment": "./data/comments/donne_wotton_hwkisscom.html"
+                },
+                {
+                    "from": 1,
+                    "to": 0,
+                    "title": "To John Donne",
+                    "content": "./data/letters/donne_wotton/tojd.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "HWHiber",
+                    "content": "./data/letters/donne_wotton/hwhiber.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "HWNews",
+                    "content": "./data/letters/donne_wotton/hwnews.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "HWVenice",
+                    "content": "./data/letters/donne_wotton/hwvenice.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "source": 0,
+            "target": 2,
+            "relationship": "./relationship/donne_bedford.html",
+            "stroke-width": 10,
+            "stroke": "#4287f5",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfDead",
+                    "content": "./data/letters/donne_bedford/bedfdead.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfHon",
+                    "content": "./data/letters/donne_bedford/bedfhon.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfReas",
+                    "content": "./data/letters/donne_bedford/bedfreas.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfRef",
+                    "content": "./data/letters/donne_bedford/bedfref.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfShe",
+                    "content": "./data/letters/donne_bedford/bedfshe.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfTwi",
+                    "content": "./data/letters/donne_bedford/bedftwi.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfWrit",
+                    "content": "./data/letters/donne_bedford/bedfwrit.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+
+        },
+        {
+            "id": 2,
+            "source": 0,
+            "target": 3,
+            "relationship": "./relationship/donne_goodyer.html",
+            "stroke-width": 10,
+            "stroke": "#f54242",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "HG",
+                    "content": "./data/letters/donne_goodere/hg.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "source": 0,
+            "target": 4,
+            "relationship": "./relationship/donne_cbrooke.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 4,
+                    "title": "To Mr. C. B. (1594?)",
+                    "content": "./data/letters/donne_cbrooke/cb.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 4,
+                    "title": "The Storm (1597-)",
+                    "content": "./data/letters/donne_cbrooke/storm.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 4,
+                    "title": "The Calm (1598-)",
+                    "content": "./data/letters/donne_cbrooke/calm.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+
+            ]
+        },
+        {
+            "id": 4,
+            "source": 0,
+            "target": 5,
+            "relationship": "./relationship/donne_rwoodward.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "RWEnvy",
+                    "content": "./data/letters/donne_rwoodward/rwenvy.html",
+                    "comment": "./data/comments/donne_rwoodward_rwenvycom.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "RWMind",
+                    "content": "./data/letters/donne_rwoodward/rwmind.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "RWSlumb",
+                    "content": "./data/letters/donne_rwoodward/rwslumb.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "RWThird",
+                    "content": "./data/letters/donne_rwoodward/rwthird.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "RWZeal",
+                    "content": "./data/letters/donne_rwoodward/rwzeal.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "source": 0,
+            "target": 6,
+            "relationship": "./relationship/donne_twoodward.html",
+            "letters": [
+                {
+                    "from": 6,
+                    "to": 0,
+                    "title": "To Mr. J. D. (To John Donne)",
+                    "content": "./data/letters/donne_twoodward/tomrjd.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 6,
+                    "title": "TWHail",
+                    "content": "./data/letters/donne_twoodward/twhail.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 6,
+                    "title": "TWHarsh",
+                    "content": "./data/letters/donne_twoodward/twharsh.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 6,
+                    "title": "TWHence",
+                    "content": "./data/letters/donne_twoodward/twhence.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 6,
+                    "title": "TWPreg",
+                    "content": "./data/letters/donne_twoodward/twpreg.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "source": 0,
+            "target": 7,
+            "relationship": "./relationship/donne_eherbert.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 7,
+                    "title": "EdHerb",
+                    "content": "./data/letters/donne_eherbert/edherb.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "source": 0,
+            "target": 8,
+            "relationship": "./relationship/donne_mherbert.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 8,
+                    "title": "MHMary",
+                    "content": "./data/letters/donne_mherbert/mhmary.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 8,
+                    "title": "MHPaper",
+                    "content": "./data/letters/donne_mherbert/mhmary.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+
+            ]
+        },
+        {
+            "id": 8,
+            "source": 0,
+            "target": 9,
+            "relationship": "./relationship/donne_gherbert.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 9,
+                    "title": "GHerb",
+                    "content": "./data/letters/donne_gherbert/gherb.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 9,
+                    "to": 0,
+                    "title": "To John Donne...",
+                    "content": "./data/letters/donne_gherbert/jdsacram.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "source": 0,
+            "target": 10,
+            "relationship": "./relationship/donne_jonson.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 10,
+                    "title": "Volpone",
+                    "content": "./data/letters/donne_jonson/volpone.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 10,
+                    "to": 0,
+                    "title": "JDDoubt",
+                    "content": "./data/letters/donne_jonson/jddoubt.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 10,
+                    "title": "JDPhoebus",
+                    "content": "./data/letters/donne_jonson/jdphoebus.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "source": 0,
+            "target": 11,
+            "relationship": "./relationship/donne_cronwaleys.html",
+            "letters": []
+        },
+        {
+            "id": 11,
+            "source": 0,
+            "target": 12,
+            "relationship": "./relationship/donne_donnejr.html",
+            "letters": [
+                {
+                    "from": 12,
+                    "to": 0,
+                    "title": "To John Donne Sr...",
+                    "content": "./data/letters/donne_donnejr/sontofather.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "source": 5,
+            "target": 6,
+            "relationship": "./relationship/rwoodward_twoodward.html",
+            "letters": [
+            ]
+        },
+        {
+            "id": 18,
+            "source": 0,
+            "target": 13,
+            "relationship": "./relationship/donne_lofd.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 13,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "source": 0,
+            "target": 14,
+            "relationship": "./relationship/donne_guilpin.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 14,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "source": 0,
+            "target": 15,
+            "relationship": "./relationship/donne_sbrooke.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 15,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "source": 0,
+            "target": 16,
+            "relationship": "./relationship/donne_bell.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 16,
+                    "title": "Template",
+                    "content": "./data/letters/donne_bell/bb.html",
+                    "comment": "./data/comments/donne_bell_bbcom.html"
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "source": 0,
+            "target": 17,
+            "relationship": "./relationship/donne_il.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 17,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "source": 0,
+            "target": 18,
+            "relationship": "./relationship/donne_huntingdon.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 18,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "source": 0,
+            "target": 19,
+            "relationship": "./relationship/donne_lady_carey.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 19,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "source": 0,
+            "target": 20,
+            "relationship": "./relationship/donne_salisbury.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 20,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "source": 0,
+            "target": 21,
+            "relationship": "./relationship/donne_tilman.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 21,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+            ]
+        },
+
+        {
+            "id": 27,
+            "source": 0,
+            "target": 22,
+            "relationship": "./relationship/donne_randrews.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfDead",
+                    "content": "./data/letters/donne_bedford/bedfdead.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfHon",
+                    "content": "./data/letters/donne_bedford/bedfhon.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfReas",
+                    "content": "./data/letters/donne_bedford/bedfreas.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfRef",
+                    "content": "./data/letters/donne_bedford/bedfref.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfShe",
+                    "content": "./data/letters/donne_bedford/bedfshe.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfTwi",
+                    "content": "./data/letters/donne_bedford/bedftwi.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                },
+                {
+                    "from": 0,
+                    "to": 2,
+                    "title": "BedfWrit",
+                    "content": "./data/letters/donne_bedford/bedfwrit.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+
+        },
+        {
+            "id": 28,
+            "source": 0,
+            "target": 23,
+            "relationship": "./relationship/donne_ladyessexrich.html",
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 23,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+
+        },
+        {
+            "id": 29,
+            "source": 19,
+            "target": 23,
+            "relationship": "./relationship/lady_carey_ladyessexrich.html",
+            "letters": [
+                {
+                    "from": 19,
+                    "to": 23,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+
+        },
+        {
+            "id": 12,
+            "source": 10,
+            "target": 2,
+            "relationship": "./relationship/jonson_bedford.html",
+            "letters": [
+                {
+                    "from": 10,
+                    "to": 2,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+
+            ]
+        },
+        {
+            "id": 13,
+            "source": 7,
+            "target": 8,
+            "relationship": "./relationship/eherbert_mherbert.html",
+            "letters": [
+                {
+                    "from": 7,
+                    "to": 8,
+                    "title": "BedfCab",
+                    "content": "./data/letters/donne_bedford/bedfcab.html",
+                    "comment": "./data/comments/Donne_Henry_letter1.html"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "source": 7,
+            "target": 9,
+            "relationship": "./relationship/eherbert_gherbert.html",
+            "letters": [
+                {
+                    "from": 7,
+                    "to": 9,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+
+            ]
+        },
+        {
+            "id": 15,
+            "source": 8,
+            "target": 9,
+            "relationship": "./relationship/mherbert_gherbert.html",
+            "letters": [
+                {
+                    "from": 8,
+                    "to": 9,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+
+            ]
+        },
+
+        {
+            "id": 17,
+            "source": 3,
+            "target": 4,
+            "relationship": "./relationship/goodyer_cbrooke.html",
+            "letters": [
+                {
+                    "from": 3,
+                    "to": 4,
+                    "title": "Template",
+                    "content": "./data/letters/letter_template.html",
+                    "comment": "./data/comments/letter_comment_template.html"
+                }
+
+            ]
+        },
+        {
+            "id": 30,
+            "source": 4,
+            "target": 15,
+            "relationship": "./relationship/cbrooke_sbrooke.html",
+            "letters": [
+
+
+            ]
+        },
+        {
+            "id": 31,
+            "source": 2,
+            "target": 3,
+            "relationship": "./relationship/goodere_bedford.html",
+            "letters": [
+
+
+            ]
+        },
+        {
+            "id": 32,
+            "source": 5,
+            "target": 1,
+            "relationship": "./relationship/rwoodward_wotton.html",
+            "letters": [
+
+
+            ]
+        },
+        {
+            "id": 33,
+            "source": 0,
+            "target": 24,
+            "stroke-width": 10,
+            "stroke": "#2596be",
+            "relationship": "./relationship/donne_hoskyns.txt",
+            "letters": [
+
+
+            ]
+        },
+        {
+            "id": 34,
+            "source": 10,
+            "target": 24,
+            "relationship": "./relationship/jonson_hoskyns.html",
+            "letters": [
+
+
+            ]
+        },
+        {
+            "id": 35,
+            "source": 3,
+            "target": 24,
+            "relationship": "./relationship/goodere_hoskyns.html",
+            "letters": [
+
+
+            ]
+        }
+
+
+    ]
+}

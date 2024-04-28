@@ -1,0 +1,134 @@
+{
+    "people": [
+        {
+            "id": 0,
+            "name": "John Donne",
+            "bio": {
+                "born": 1571,
+                "died": 1631,
+                "occupation": "Poet, priest, lawyer",
+                "genre": "Satire, love poetry, elegy, sermons",
+                "spouse": "Anne More",
+                "fullbio": "https://en.wikipedia.org/wiki/John_Donne"
+            }
+        },
+        {
+            "id": 1,
+            "name": "Henry Wotton",
+            "bio": {
+                "born": 1568,
+                "died": 1639,
+                "occupation": "Author, diplomat, politician",
+                "spouse": "Victoria Wotton",
+                "fullbio": "https://en.wikipedia.org/wiki/Henry_Wotton"
+            }
+        },
+		{
+            "id": 2,
+            "name": "Henry Goodyer",
+            "bio": {
+                "born": 1540,
+                "died": 1640,
+                "occupation": "Many Different Things",
+                "spouse": "Unverified",
+                "fullbio": "https://en.wikipedia.org/wiki/Henry_Goodyer"
+            }
+        },
+		{
+            "id": 3,
+            "name": "Lucy Russell",
+            "bio": {
+                "born": 1234,
+                "died": 4321,
+                "occupation": "Countess of Bedford",
+                "spouse": "Unverified",
+                "fullbio": "https://en.wikipedia.org/wiki/Henry_Goodyer"
+            }
+        }
+    ],
+    "relationships": [
+        {
+            "id": 0,
+            "source": 0,
+            "target": 1,
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "To Sir Henry Wotton",
+                    "content": "./data/letters/Test.html"
+                },
+                {
+                    "from": 1,
+                    "to": 0,
+                    "title": "To John Donne",
+                    "content": "./data/letters/tojohndonne.txt"
+                }
+            ]
+        },
+		{
+            "id": 1,
+            "source": 0,
+            "target": 3,
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "To Sir Henry Wotton",
+                    "content": "./data/letters/tosirhenrywotton.txt"
+                },
+                {
+                    "from": 1,
+                    "to": 0,
+                    "title": "To John Donne",
+                    "content": "./data/letters/tojohndonne.txt"
+                }
+            ]
+        },
+		{
+            "id": 2,
+            "source": 0,
+            "target": 2,
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "To Sir Henry Wotton",
+                    "content": "./data/letters/tosirhenrywotton.txt"
+                },
+                {
+                    "from": 1,
+                    "to": 0,
+                    "title": "To John Donne",
+                    "content": "./data/letters/tojohndonne.txt"
+                }
+            ]
+        },
+		{
+            "id": 3,
+            "source": 1,
+            "target": 2,
+            "letters": [
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "To John Donne Again",
+                    "content": "./data/letters/Shepherd.txt"
+                },
+                {
+                    "from": 0,
+                    "to": 1,
+                    "title": "To Sir Henry Wotton",
+                    "content": "./data/letters/tosirhenrywotton.txt"
+                },
+
+                {
+                    "from": 1,
+                    "to": 0,
+                    "title": "To John Donne",
+                    "content": "./data/letters/tojohndonne.txt"
+                }
+            ]
+        }
+    ]
+}

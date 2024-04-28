@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./3rd-party/bootstrap/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js" integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./3rd-party/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="./3rd-party/jquery/script.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <title>Network Edition</title>
+</head>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-dark position-fixed z-3 w-100 py-0 ps-5">
+        <div class="container-fluid">
+            <img id="logo" src="img_1.png" alt="John Donne">
+            <a class="navbar-brand fs-6 text-light" href="#">The Verse Letters of John Donne: A Network Edition</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">General Introduction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Textual Introduction</a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Introduction
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">General Introduction</a></li>
+                            <li><a class="dropdown-item" href="#">Textual Introduction</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Digital Donne</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="myModal"></div>
+    
+    <!-- D3 content -->
+    <main id="page">
+        <div id="page-content">
+            <svg id="container" viewBox="0 0 1500 500"></svg>
+            <div id="container-zoom-controller" class="btn-group-vertical">
+                <button type="button" id="zoom-in-btn" class="btn btn-primary">&plus;</button>
+                <button type="button" id="zoom-out-btn" class="btn btn-secondary">&minus;</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="fixed-bottom mt-auto bg-light py-1">
+        <p class="text-dark fs-6 mb-0 text-center"><strong>Creative Commons License</strong> <span class="fw-light">- This work is licensed under CC BY 4.0. Attribution required.</span></p>
+    </footer>
+
+    <script type="module">
+        import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+        const width = 1500;
+        const height = 500;
+        
+        const drawGraph = async () => {
+            // Extract the data
+            const data = await d3.json('data/data.json');
+
+            let nodes = data.people.map(d => ({...d}));
+            const links = data.relationships.map(d => ({...d}));
+
+            // Initialize color
+            // const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+            // Create a simulation with several forces.
+            const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(links).id(d => d.id).distance(200))
+            .force("charge", d3.forceManyBody().strength(-3000))
+            .force("center", d3.forceCenter(width/2, height/2))
+            .on("tick", ticked);
+
+            const svg = d3.select("svg");
+
+            // Draw the lines
+            const link = svg.append("g")
+            .selectAll()
+                .data(links)
+                .join("line")
+                .attr("class", "link")
+                .attr("stroke-width", d => d["stroke-width"] ? d["stroke-width"] : 5)
+                .attr("stroke", d => d.stroke ? d.stroke : "#999")
+                .attr("data-stroke", d => d.stroke ? d.stroke : "#999")
+                .attr("data-bs-toggle", "modal")
+                .attr("data-bs-target", d => `#relationship-${d.id}`);
+
+            // Draw the nodes
+            const node = svg.append("g")
+            .attr("stroke-width", 3)
+            .selectAll()
+                .data(nodes)
+                .join("circle")
+                .attr("class", "node")
+                .attr("aria-labelledby", d => d.name)
+                .attr("r", d => d.radius ? d.radius : 20)
+                .attr("fill", d => d.color)
+                .attr("stroke", "#999")
+                .attr("data-bs-toggle", "modal")
+                .attr("data-bs-target", d => `#bio-${d.id}`);
+            
+            // Add names as texts to nodes
+            let canvas = null;
+            const text = svg.append("g")
+            .selectAll()
+                .data(nodes)
+                .join("text")
+                .text(d => d.name)
+                .attr('dx', d => { 
+                    // Calculate the text width and shift the text to the left by half of the text width
+                    if (!canvas) canvas = document.createElement('canvas');
+                    const context = canvas.getContext("2d");
+                    context.font = "16px Times New Roman";
+                    const textWidth = context.measureText(d.name).width;
+                    return  -textWidth / 2; 
+                })
+                // Try to shift the text to be centered vertically of the node but doesn't work. Not sure why.
+                /*.attr('dy', d => { 
+                    console.log(d.name);
+                    // Calculate the text width and shift the text to the left by half of the text width
+                    if (!canvas) canvas = document.createElement('canvas');
+                    const context = canvas.getContext("2d");
+                    context.font = "16px Times New Roman";
+                    const textHeight = context.measureText(d.name).height;
+                    return  -textHeight / 2; 
+                });*/
+
+            // Add a title tag to each node
+            node.append("title")
+            .text(d => d.name);
+
+            // Add a drag behavior.
+            node.call(d3.drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended));
+
+            node
+            .on("mouseover", (event) => {
+                event.target.style.stroke = '#000';
+            })
+            .on("mouseout", (event) => {
+                event.target.style.stroke = '#999';
+            })
+
+            // Add a hover effect for lines
+            link
+            .on("mouseover", (event) => {
+                event.target.style.stroke = '#000';
+            })
+            .on("mouseout", (event) => {
+                event.target.style.stroke = event.target.dataset.stroke;
+            })
+
+            // Update position of lines and nodes every second
+            function ticked() {
+                link
+                    .attr("x1", d => d.source.x)
+                    .attr("y1", d => d.source.y)
+                    .attr("x2", d => d.target.x)
+                    .attr("y2", d => d.target.y);
+            
+                node
+                    .attr("cx", d => d.x)
+                    .attr("cy", d => d.y);
+                text
+                    .attr("x", d => d.x)
+                    .attr("y", d => d.y);
+            }
+
+            // Custom force. Not in use but put here in case needed in the future.
+            function customForce(alpha) {
+                for (let i = 0, n = nodes.length, node, k = alpha * 0.1; i < n; ++i) {
+                  node = nodes[i];
+                  node.vx -= node.x * k;
+                  node.vy -= node.y * k;
+                }
+            }
+
+            // Functions to handle drag events
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+            
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+
+            // Add bio models
+            for (let i=0; i<nodes.length; i++) {
+                const person = nodes[i];
+                document.getElementById('container').insertAdjacentHTML('afterend', 
+                `<div class="modal fade" id="bio-${person.id}" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-fullscreen-xl-down modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">${person.name} (${person.bio.born} - ${person.bio.died})</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="accordion" id="bio-content-${person.id}">
+                            ${Object.keys(person.data).map((key, personDataInd) => 
+                                `<div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#person-${person.id}-${key}" aria-controls="person-${person.id}-${key}">
+                                            ${key}
+                                        </button>
+                                    </h2>
+                                    <div id="person-${person.id}-${key}" class="accordion-collapse collapse ${personDataInd === 0 ? 'show' : ''}" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body ${key.toLowerCase() === "image" ? "text-center": ""}">
+                                            <iframe class="bio-iframe" src="${person.data[key]}"></iframe>
+                                        </div>
+                                    </div>
+                                </div>`
+                            ).join ('')}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>`)
+            }
+
+            // Add relationship models
+            for (let i=0; i<links.length; i++) {
+                const relationship = links[i];
+                document.getElementById('container').insertAdjacentHTML('afterend', 
+                `<div class="relationship-modal modal fade" id="relationship-${relationship.id}" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5"><strong>${relationship.source.name}</strong> and <strong>${relationship.target.name}</strong></h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body"> 
+                            <ul class="nav nav-tabs" id="link-tab-${relationship.id}" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="relationship-tab-${relationship.id}" data-bs-toggle="tab" data-bs-target="#relationship-tab-pane-${relationship.id}" type="button" role="tab" aria-controls="relationship-tab-pane-${relationship.id}" aria-selected="true">Relationship</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="letters-tab-${relationship.id}" data-bs-toggle="tab" data-bs-target="#letters-tab-pane-${relationship.id}" type="button" role="tab" aria-controls="letters-tab-pane-${relationship.id}" aria-selected="false">Letters</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="link-tab-content-${relationship.id}">
+                                <div class="tab-pane fade show active" id="relationship-tab-pane-${relationship.id}" role="tabpanel" aria-labelledby="relationship-tab-pane-${relationship.id}" tabindex="0">
+                                    <iframe class="relationship-iframe" src="${relationship.relationship}"></iframe>
+                                </div>
+                                <div class="tab-pane fade" id="letters-tab-pane-${relationship.id}" role="tabpanel" aria-labelledby="letters-tab-pane-${relationship.id}" tabindex="0">
+                                    <div class="row">
+                                        <div class="accordion col" id="letters-${relationship.id}">
+                                            ${relationship.letters.map((letter, letterIndex) => 
+                                            `<div class="accordion-item">
+                                                <h2 class="accordion-header">
+                                                    <button class="letter-open-button accordion-button ${letterIndex === 0 ? '' : 'collapsed'}" 
+                                                        type="button" 
+                                                        data-bs-toggle="collapse" 
+                                                        data-bs-target="#letter-${letterIndex}" 
+                                                        aria-expanded="true" 
+                                                        aria-controls="letter-${letterIndex}"
+                                                        data-comment="${letter.comment}">
+                                                        ${letter.title}
+                                                    </button>
+                                                </h2>
+                                                <div id="letter-${letterIndex}" class="accordion-collapse collapse ${letterIndex === 0 ? 'show' : ''}" data-bs-parent="#letters-${relationship.id}">
+                                                    <div class="accordion-body">
+                                                        <iframe class="letter-iframe" src="${letter.content}"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>`    
+                                            ).join('')}
+                                        </div>
+
+                                        ${relationship.letters.length > 0 ? `<div class="card col border-0">
+                                            <button type="button" class="card-btn-close btn-close" aria-label="Close"></button>
+                                            <div class="card-body">
+                                                <iframe class="letter-comment" src="${relationship.letters[0].comment}"></iframe>
+                                            </div>
+                                        </div>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>`)
+            }
+        }
+
+        drawGraph();
+        
+        // Add script.js to add interactivity to the modals
+        const script = document.createElement('script');
+        script.src = 'script.js';
+        document.body.appendChild(script);
+    </script>
+    <script type="text/javascript" src="dragandzoom.js"></script>
+</body>
+</html>
